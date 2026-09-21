@@ -17,7 +17,7 @@ void push(char url[])
 {
     if (top == MAX - 1)
     {
-        printf("History is full. better luck next time\n");
+        printf("History is full. better luck next time, or approach fiza \n");
         return;
     }
 
