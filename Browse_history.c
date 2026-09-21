@@ -17,7 +17,7 @@ void push(char url[])
 {
     if (top == MAX - 1)
     {
-        printf("History is full.\n");
+        printf("History overflow\n");
         return;
     }
 
