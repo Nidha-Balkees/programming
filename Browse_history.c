@@ -17,14 +17,14 @@ void push(char url[])
 {
     if (top == MAX - 1)
     {
-        printf("History is full.\n");
+        printf("History full\n");
         return;
     }
 
     top++;
     strcpy(history[top], url);
 
-    printf("Website visited successfully.\n");
+    printf("Website visited successfully\n");
 }
 
 /* Remove the current website */
@@ -32,11 +32,11 @@ void pop()
 {
     if (isEmpty())
     {
-        printf("No history to go back.\n");
+        printf("No history\n");
         return;
     }
 
-    printf("Going back from: %s\n", history[top]);
+    printf("Going back from %s\n", history[top]);
     top--;
 }
 
@@ -45,7 +45,7 @@ void peek()
 {
     if (isEmpty())
     {
-        printf("No current page.\n");
+        printf("No current page\n");
         return;
     }
 
@@ -59,11 +59,11 @@ void showHistory()
 
     if (isEmpty())
     {
-        printf("History is empty.\n");
+        printf("History empty\n");
         return;
     }
 
-    printf("\n===== Browser History =====\n");
+    printf("\n==== Browser History ====\n");
 
     for (i = top; i >= 0; i--)
     {
@@ -81,7 +81,7 @@ int main()
         printf("\n===== Browser History =====\n");
         printf("1. Visit Website\n");
         printf("2. Go Back\n");
-        printf("3. Show Current Page\n");
+        printf("3. Current Page\n");
         printf("4. Show History\n");
         printf("5. Exit\n");
 
@@ -109,11 +109,11 @@ int main()
                 break;
 
             case 5:
-                printf("Exiting program...\n");
+                printf("Exiting program..\n");
                 return 0;
 
             default:
-                printf("Invalid choice.\n");
+                printf("Invalid choice\n");
         }
     }
 
