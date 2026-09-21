@@ -6,13 +6,15 @@
 char history[MAX][100];
 int top = -1;
 
-/* Check whether stack is empty */
+
+// Check whether history is empty
 int isEmpty()
 {
     return top == -1;
 }
 
-/* Add a website to the stack */
+
+// Visit a website
 void push(char url[])
 {
     if (top == MAX - 1)
@@ -27,7 +29,8 @@ void push(char url[])
     printf("Website visited successfully.\n");
 }
 
-/* Remove the current website */
+
+// Go back to previous page
 void pop()
 {
     if (isEmpty())
@@ -40,7 +43,8 @@ void pop()
     top--;
 }
 
-/* Show the current page */
+
+// Show current page
 void peek()
 {
     if (isEmpty())
@@ -52,7 +56,8 @@ void peek()
     printf("Current Page: %s\n", history[top]);
 }
 
-/* Display all browsing history */
+
+// Show all browser history
 void showHistory()
 {
     int i;
@@ -71,6 +76,36 @@ void showHistory()
     }
 }
 
+
+// Search for a URL in browser history
+void searchHistory()
+{
+    char searchURL[100];
+    int i;
+    int count = 0;
+
+    printf("Enter URL to search: ");
+    scanf("%s", searchURL);
+
+    for (i = 0; i <= top; i++)
+    {
+        if (strcmp(history[i], searchURL) == 0)
+        {
+            count++;
+        }
+    }
+
+    if (count > 0)
+    {
+        printf("%s was visited %d time(s).\n", searchURL, count);
+    }
+    else
+    {
+        printf("%s was not found in history.\n", searchURL);
+    }
+}
+
+
 int main()
 {
     int choice;
@@ -83,7 +118,8 @@ int main()
         printf("2. Go Back\n");
         printf("3. Show Current Page\n");
         printf("4. Show History\n");
-        printf("5. Exit\n");
+        printf("5. Search History\n");
+        printf("6. Exit\n");
 
         printf("Enter choice: ");
         scanf("%d", &choice);
@@ -109,6 +145,10 @@ int main()
                 break;
 
             case 5:
+                searchHistory();
+                break;
+
+            case 6:
                 printf("Exiting program...\n");
                 return 0;
 
