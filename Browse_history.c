@@ -17,14 +17,14 @@ void push(char url[])
 {
     if (top == MAX - 1)
     {
-        printf("History is full. better luck next time, or approach fiza \n");
+        printf("History full\n");
         return;
     }
 
     top++;
     strcpy(history[top], url);
 
-    printf("Website visited successfully.\n");
+    printf("Website visited Sorrowfully\n");
 }
 
 /* Remove the current website */
@@ -63,7 +63,7 @@ void showHistory()
         return;
     }
 
-    printf("\n===== Browser History =====\n");
+    printf("\n==== Browser History ====\n");
 
     for (i = top; i >= 0; i--)
     {
@@ -81,7 +81,7 @@ int main()
         printf("\n===== Browser History =====\n");
         printf("1. Visit Website\n");
         printf("2. Go Back\n");
-        printf("3. Show Current Page\n");
+        printf("3. Current Page\n");
         printf("4. Show History\n");
         printf("5. Exit\n");
 
@@ -109,11 +109,11 @@ int main()
                 break;
 
             case 5:
-                printf("Exiting program...\n");
+                printf("Exiting program..\n");
                 return 0;
 
             default:
-                printf("Invalid choice.\n");
+                printf("Invalid choice\n");
         }
     }
 
