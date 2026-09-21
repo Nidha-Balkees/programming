@@ -24,7 +24,7 @@ void push(char url[])
     top++;
     strcpy(history[top], url);
 
-    printf("Website visited successfully\n");
+    printf("Website visited Sorrowfully\n");
 }
 
 /* Remove the current website */
