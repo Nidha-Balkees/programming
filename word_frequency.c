@@ -108,6 +108,22 @@ int main()
 
     printf("\nMost frequent word: %s\n", words[maxIndex].word);
     printf("Count: %d\n", words[maxIndex].count);
+    printf("\nRepeated words:\n");
 
+    int repeatedFound = 0;
+
+    for (i = 0; i < wordCount; i++)
+    {
+        if (words[i].count > 1)
+        {
+            printf("%s -> %d\n", words[i].word, words[i].count);
+            repeatedFound = 1;
+        }
+    }
+
+    if (repeatedFound == 0)
+    {
+        printf("No repeated words found.\n");
+    }
     return 0;
 }
