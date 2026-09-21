@@ -79,8 +79,8 @@ int main()
     while (1)
     {
         printf("\n===== Browser History =====\n");
-        printf("1. Visit Website\n");
-        printf("2. Go Back\n");
+        printf("1. Go back\n");
+         printf("2. Visit Website\n");
         printf("3. Show Current Page\n");
         printf("4. Show History\n");
         printf("5. Exit\n");
@@ -91,13 +91,13 @@ int main()
         switch (choice)
         {
             case 1:
-                printf("Enter website URL: ");
-                scanf("%s", url);
-                push(url);
+                pop()
                 break;
 
             case 2:
-                pop();
+                printf("Enter website URL: ");
+                scanf("%s", url);
+                push(url);
                 break;
 
             case 3:
