@@ -17,7 +17,7 @@ void push(char url[])
 {
     if (top == MAX - 1)
     {
-        printf("History is full.\n");
+        printf("History is full. better luck next time\n");
         return;
     }
 
@@ -32,11 +32,11 @@ void pop()
 {
     if (isEmpty())
     {
-        printf("No history to go back.\n");
+        printf("No history to go back.bad luck\n");
         return;
     }
 
-    printf("Going back from: %s\n", history[top]);
+    printf("Going back from: %s\n . bye byeee", history[top]);
     top--;
 }
 
@@ -45,7 +45,7 @@ void peek()
 {
     if (isEmpty())
     {
-        printf("No current page.\n");
+        printf("No current page .bad movee\n");
         return;
     }
 
@@ -59,7 +59,7 @@ void showHistory()
 
     if (isEmpty())
     {
-        printf("History is empty.\n");
+        printf("History is empty.better luck next time\n");
         return;
     }
 
